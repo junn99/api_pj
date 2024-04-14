@@ -5,7 +5,7 @@ from visualizer import Visualizer
 from logger import Logger
 
 def main():
-    api_key = '<YOUR_API_KEY>'  # openweathermap API 키 입력
+    api_key = '792bc2e36f6fbf16ec91663c3ebf0242'  # openweathermap API 키 입력
     city = input("Which City? ")
     
     fetcher = DataFetcher(api_key, city)
