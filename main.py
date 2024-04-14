@@ -1,6 +1,6 @@
 # main.py
 from data_fetcher import DataFetcher
-# from data_processor import DataProcessor
+from data_processor import DataProcessor
 # from visualizer import Visualizer
 # from logger import Logger
 
@@ -9,13 +9,13 @@ def main():
     city = input("Which City? ")
     
     fetcher = DataFetcher(api_key, city)
-    # processor = DataProcessor()
+    processor = DataProcessor()
     # visualizer = Visualizer()
     # logger = Logger()
     
     raw_data = fetcher.fetch_weather()
     raw_data
-    # processed_data = processor.process_data(raw_data)
+    processed_data = processor.process_data(raw_data)
     # logger.save_data(processed_data)
     # visualizer.plot_data(processed_data)
 
