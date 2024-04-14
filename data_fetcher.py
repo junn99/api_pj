@@ -3,11 +3,11 @@ import requests
 
 class DataFetcher:
     def __init__(self,api_key,city):
-        self.api_ksy = api_key
+        self.api_key = api_key
         self.city = city
 
     def fetch_weather(self):
-        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+        url = f"http://api.openweathermap.org/data/2.5/weather?q={self.city}&appid={self.api_key}&units=metric"
         response = requests.get(url)
         try:
             if response.status_code == 200:
